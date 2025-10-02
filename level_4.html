@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>05 공통선시험</title>
+    <style>
+      /* 테이블 스타일 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        vertical-align: top; /* 셀 내용이 상단에 정렬되도록 함 */
+      }
+      td:first-child {
+        width: 80%;
+      }
+      img {
+        max-width: 100%; /* 이미지가 셀 너비를 넘지 않도록 조정 */
+        height: auto;
+      }
+      textarea.image-content {
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        resize: none;
+      }
+      .container {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100vh; /* 뷰포트 높이의 80%로 설정하여 스크롤이 생기도록 함 */
+      }
+
+      .container1 {
+        width: 80%;
+        overflow: auto; /* 내용이 넘칠 때 스크롤 */
+        box-sizing: border-box; /* 패딩과 보더가 너비에 포함되도록 설정 */
+      }
+
+      .container2 {
+        width: 20%;
+        overflow: auto; /* 내용이 넘칠 때 스크롤 */
+        box-sizing: border-box;
+      }
+      /* 하단 텍스트 박스 스타일 */
+      #srcList {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        resize: none;
+      }
+      #srcListCode {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        resize: none;
+      }
+      .button-container {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+      }
+      .button-container button {
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container1">
+        <table border="1">
+          <tbody>
+            <tr>
+              <td><img src="level_4/001.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/002.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/003.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/004.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/005.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/006.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/007.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/008.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/009.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/010.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/011.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/012.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/013.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/014.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/015.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/016.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/017.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/018.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/019.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/020.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/021.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/022.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/023.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/024.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/025.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/026.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/027.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/028.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/029.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/030.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/031.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/032.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/033.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/034.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/035.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/036.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/037.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/038.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/039.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/040.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/041.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/042.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/043.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/044.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/045.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/046.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/047.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/048.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/049.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/050.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/051.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/052.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/053.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/054.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/055.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/056.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/057.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/058.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/059.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/060.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/061.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/062.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/063.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/064.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/065.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/066.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/067.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/068.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/069.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/070.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/071.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/072.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/073.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/074.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/075.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/076.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/077.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/078.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/079.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/080.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/081.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/082.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/083.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/084.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/085.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/086.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/087.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/088.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/089.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/090.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/091.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/092.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/093.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/094.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/095.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/096.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/097.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/098.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/099.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+            <tr>
+              <td><img src="level_4/100.png" alt="" /></td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container2">
+        <textarea id="srcList" readonly></textarea>
+        <textarea id="srcListCode" readonly></textarea>
+        <div class="button-container">
+          <button onclick="copyToClipboard()">복사</button>
+          <button onclick="clearAll()">삭제</button>
+          <button onclick="inputNumbers()">숫자기입</button>
+          <button onclick="deleteInputNumbers()">기입숫자제거</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function updateSrcList() {
+        const allRows = document.querySelectorAll("tbody tr");
+        let combinedContent = "";
+        let combinedContent1 = "";
+
+        allRows.forEach((row) => {
+          const image = row.querySelector("img");
+          const contentTextarea = row.querySelector(".image-content");
+
+          if (image && contentTextarea) {
+            const src = image.getAttribute("src");
+            const text = contentTextarea.value.trim();
+
+            if (text !== "") {
+              combinedContent += `주소: ${src}\n내용: ${text}\n\n`;
+              combinedContent1 += `
+            <tr>
+              <td>
+                <img
+                  src="${src}"
+                  alt="${text}"
+                />
+              </td>
+              <td>
+                <textarea
+                  class="image-content"
+                  oninput="updateSrcList()"
+                ></textarea>
+                <label for="label">label</label>
+              </td>
+            </tr>\n`;
+            }
+          }
+        });
+
+        document.getElementById("srcList").value = combinedContent;
+        document.getElementById("srcListCode").value = combinedContent1;
+      }
+      function copyToClipboard() {
+        const textarea = document.getElementById("srcList");
+        textarea.select();
+        document.execCommand("copy");
+        alert("주소와 내용이 클립보드에 복사되었습니다.");
+      }
+
+      function clearAll() {
+        const allTextareas = document.querySelectorAll(".image-content");
+        allTextareas.forEach((textarea) => {
+          textarea.value = "";
+        });
+        document.getElementById("srcList").value = "";
+        alert("모든 내용이 초기화되었습니다.");
+      }
+
+      function inputNumbers() {
+        const allRows = document.querySelectorAll("tbody tr");
+        allRows.forEach((row, index) => {
+          const indexNumber = index + 1;
+          const textarea = row.querySelector("textarea.image-content");
+          if (textarea) {
+            textarea.value = indexNumber.toString();
+          }
+        });
+      }
+
+      // 이 함수는 텍스트 영역에 순서대로 기입된 숫자만 지우고, 다른 내용이 있으면 그대로 남깁니다.
+      // 그리고 그 결과에 맞춰 srcListCode를 업데이트합니다.
+      function deleteInputNumbers() {
+        const allRows = document.querySelectorAll("tbody tr");
+
+        allRows.forEach((row, index) => {
+          const textarea = row.querySelector("textarea.image-content");
+
+          if (textarea) {
+            const expectedNumber = (index + 1).toString();
+            const currentValue = textarea.value.trim();
+
+            if (currentValue === expectedNumber) {
+              textarea.value = "";
+            }
+          }
+        });
+
+        // 텍스트 영역 내용 변경 후 srcListCode를 다시 생성합니다.
+        updateSrcList();
+      }
+
+      // 페이지 로드 시 모든 textarea의 placeholder를 설정하는 함수
+      window.onload = function () {
+        const allRows = document.querySelectorAll("tbody tr");
+        allRows.forEach((row) => {
+          const image = row.querySelector("img");
+          const contentTextarea = row.querySelector(".image-content");
+          const label = row.querySelector("label"); // Select the <label> element
+
+          if (image && contentTextarea && label) {
+            const altText = image.getAttribute("alt");
+            contentTextarea.setAttribute("placeholder", altText); // Set the placeholder
+            label.textContent = altText; // Set the label's text content
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
